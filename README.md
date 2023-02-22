@@ -17,10 +17,10 @@
 ## 3. 데이터셋 설명
   - 데이터셋 주소 : https://www.kaggle.com/datasets/latifahhukma/fashion-campus?select=customer.csv
   - 사용한 데이터 파일
+    : 아래의 3가지 파일을 하나의 csv파일로 만들어 사용(최초 용량 : 약 700MB)
     - customer.csv
     - product.csv
     - transaction_new.csv <br>
-: 위의 3가지 파일을 하나의 csv파일로 만들어 사용(최초 용량 : 약 700MB)
   - 컬럼 설명
     - created_at : 이벤트 발생시각
     - customer_id : 고객 id
