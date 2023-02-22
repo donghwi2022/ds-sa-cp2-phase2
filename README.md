@@ -19,7 +19,7 @@
   - 사용한 데이터 파일
     - customer.csv
     - product.csv
-    - transaction_new.csv
+    - transaction_new.csv <br>
     : 위의 3가지 파일을 하나의 csv파일로 만들어 사용(최초 용량 : 약 700MB)
   - 컬럼 설명
     - created_at : 이벤트 발생시각
