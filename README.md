@@ -98,5 +98,5 @@
     - 다양한 모델을 비교하고 싶었으나, 실력 부족으로 1가지 모델밖에 구현하지 못함
   - 향후 계획
     - 데이터만 활용하여 옷을 추천하는 것이 아닌 '학습'까지 활용한 추천 시스템을 모델링 해보고 싶음 <br>
-      (참고자료- 딥러닝을 활용한 추천 모델링 예시)
+      (참고자료- 딥러닝을 활용한 추천 모델링 예시) <br>
       https://jalynne-kim.medium.com/%EC%B6%94%EC%B2%9C%EB%AA%A8%EB%8D%B8-%EC%9D%B4%EC%BB%A4%EB%A8%B8%EC%8A%A4-%EC%B6%94%EC%B2%9C%EB%AA%A8%EB%8D%B8%EB%A7%81-%EB%94%A5%EB%9F%AC%EB%8B%9D%EB%AA%A8%EB%8D%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0-d5017cb1335f
