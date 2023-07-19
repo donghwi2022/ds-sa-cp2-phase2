@@ -53,7 +53,7 @@
         - first_join_date : 첫 가입 날짜
 ## 4. 프로젝트 진행 내용
   ### 1. 전처리
-    - 예약 관련 컬럼
+    1. 예약 관련 컬럼
       1. booking_id가 같은 데이터는 session_id도 같기 때문에 booking_id 컬럼은 드랍하고 session_id는 라벨링 진행
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ff7584e7-0e95-4830-9e57-97abe3332afd)
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/779378e0-1743-448f-82b4-20afdb8d2710)
