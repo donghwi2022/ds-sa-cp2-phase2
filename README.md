@@ -167,7 +167,7 @@
 
   ### 5. 성능평가
   - 20개의 상품을 추천
-  - precision@k와 recall@k를 통해 성능평가
+  - precision@k와 recall@k를 통해 성능평가 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ba6e1b04-8f30-4b63-9940-3d0655655a4c)
 
   ### 6. 모듈화
