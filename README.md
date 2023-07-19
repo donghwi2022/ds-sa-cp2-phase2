@@ -14,49 +14,73 @@
 ## 3. 데이터셋 설명
   - 데이터 셋 : 2016년 ~ 2022년까지 패션캠퍼스에서 수집한 고객들의 패션 구매 데이터 (고객 정보, 상품 정보 등)
   - 데이터셋 주소 : https://www.kaggle.com/datasets/latifahhukma/fashion-campus?select=customer.csv
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/751d690c-07a5-4985-a039-4075836337c9)
-    - 총 33개 항목에 대하여 1,254,585개의 데이터
-  
-    - 컬럼 설명
-      - created_at : 이벤트 발생시각
-      - customer_id : 고객 id
-      - session_id : 세션 id
-      - payment_method : 결제 방식
-      - payment_status : 결제 성공 여부
-      - promo_amount : 할인 금액
-      - promo_code : 프로모션 코드(할인쿠폰)
-      - shipment_fee : 배송 비용
-      - shipment_date_limit : 배송까지 최대 시각(언제까지는 도착할 것이다 느낌)
-      - shipment_location_lat : 배송지역 위도
-      - shipment_location_long : 배송지역 경도
-      - total_amount : 총 비용
-      - product_id : 상품 id
-      - quantity : 주문 수량
-      - item_price : 상품 가격
-      - product_gender : 상품 타겟 성별
-      - masterCategory : 최상위 분류
-      - subCategory : 서브 분류
-      - articleType : 상품 종류
-      - baseColor : 기본 색상
-      - season : 적합 계절
-      - year : 상품 출시 년도
-      - usage : 사용 방식(어느 복장인지)
-      - productDisplayName : 상품 이름
-      - customer_gender : 고객 성별
-      - birthdate : 고객 생일
-      - device_type : 디바이스 타입
-      - device_id : 디바이스 id
-      - device_version : 디바이스 버전
-      - home_location_lat : 집 위도
-      - home_location_long : 집 경도
-      - home_location : 집 위치
-      - first_join_date : 첫 가입 날짜
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/c02929ae-dd00-4065-95e9-71335522f946)
+    - 총 40개 컬럼에 대하여 1,254,585개의 데이터
+    - 이 중에서 33개의 컬럼만 사용
+      - 컬럼 설명
+        - created_at : 이벤트 발생시각
+        - customer_id : 고객 id
+        - session_id : 세션 id
+        - payment_method : 결제 방식
+        - payment_status : 결제 성공 여부
+        - promo_amount : 할인 금액
+        - promo_code : 프로모션 코드(할인쿠폰)
+        - shipment_fee : 배송 비용
+        - shipment_date_limit : 배송까지 최대 시각(언제까지는 도착할 것이다 느낌)
+        - shipment_location_lat : 배송지역 위도
+        - shipment_location_long : 배송지역 경도
+        - total_amount : 총 비용
+        - product_id : 상품 id
+        - quantity : 주문 수량
+        - item_price : 상품 가격
+        - product_gender : 상품 타겟 성별
+        - masterCategory : 최상위 분류
+        - subCategory : 서브 분류
+        - articleType : 상품 종류
+        - baseColor : 기본 색상
+        - season : 적합 계절
+        - year : 상품 출시 년도
+        - usage : 사용 방식(어느 복장인지)
+        - productDisplayName : 상품 이름
+        - customer_gender : 고객 성별
+        - birthdate : 고객 생일
+        - device_type : 디바이스 타입
+        - device_id : 디바이스 id
+        - device_version : 디바이스 버전
+        - home_location_lat : 집 위도
+        - home_location_long : 집 경도
+        - home_location : 집 위치
+        - first_join_date : 첫 가입 날짜
 ## 4. 프로젝트 진행 내용
   ### 1. 전처리
-    - 중복 컬럼 drop
-    - 특성을 추출하기 어렵다고 판단되는 내용 컬럼 drop(first_name, last_name 등)
-    - 보안을 위해 hash값으로 처리된 데이터에 대해 시각적 편의를 위해 라벨링 진행
-    - 시계엘 컬럼 길이 제한
+    - 예약 관련 컬럼
+      1. booking_id가 같은 데이터는 session_id도 같기 때문에 booking_id 컬럼은 드랍하고 session_id는 라벨링 진행
+      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ff7584e7-0e95-4830-9e57-97abe3332afd)
+      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/779378e0-1743-448f-82b4-20afdb8d2710)
+      
+    - 상품 정보 관련 컬럼
+      1. id 컬럼은 product_id 컬럼과 같기 때문에 drop
+      2. 상품 타겟 성별 컬럼은 "gender_x → product_gender"로 변경
+      3. 기본 색상 컬럼은 "baseColour → baseColor"로 변경
+      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/f28e67e5-e72e-49ac-a908-00e62dff2c40)
+
+    - 고객 정보 관련 컬럼
+      1. 고객 이름 ~ 고객 이메일에 해당하는 컬럼은 앞의 customer_id로 대체 가능하므로 모두 drop
+      2. "gender_y → customer_gender"로 컬럼명 변경
+      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ad30f2ab-c0fa-434e-aedf-b3fcaa238624)
+
+    - 기기 정보 관련 컬럼
+      1. device_id 컬럼에 라벨 인코딩 적용
+      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ecd74272-8f01-4485-bb94-0cb1c7744b6e)
+    
+    - 고객 집 위치 정보 관련 컬럼
+      1. home_country 컬럼의 값이 인도네시아밖에 존재하지 않으므로 drop
+      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/6bc0c0d9-e9c4-471e-b41d-80ce1523c8a8)
+
+    - first_join_date 컬럼 및 시계열 컬럼
+      1. created_at, shipment_date_limit : 초 단위까지만 나오도록 길이 제한
+      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ed970f58-e591-4dc4-8e8b-fc3e0de882e9)
+
   ### 2. 시각화
     - 전체 고객에 대한 분석
     - 전체 상품에 대한 분석
