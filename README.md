@@ -12,49 +12,45 @@
   |모듈화|2/13(월) ~ 2/14(화)|모델 모듈화|진행 내용을 python파일로 변경|
   |총 개발기간|1/31(화) ~ 2/14(화)(총 2주)|||
 ## 3. 데이터셋 설명
-  - 데이터 요약 : 2016년 ~ 2022년까지 패션캠퍼스에서 수집한 고객들의 패션 구매 데이터 (고객 정보, 상품 정보 등)
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/751d690c-07a5-4985-a039-4075836337c9)
-
+  - 데이터 셋 : 2016년 ~ 2022년까지 패션캠퍼스에서 수집한 고객들의 패션 구매 데이터 (고객 정보, 상품 정보 등)
   - 데이터셋 주소 : https://www.kaggle.com/datasets/latifahhukma/fashion-campus?select=customer.csv
-  - 사용한 데이터 파일
-    : 아래의 3가지 파일을 하나의 csv파일로 만들어 사용(최초 용량 : 약 700MB)
-    - customer.csv
-    - product.csv
-    - transaction_new.csv <br>
-  - 컬럼 설명
-    - created_at : 이벤트 발생시각
-    - customer_id : 고객 id
-    - session_id : 세션 id
-    - payment_method : 결제 방식
-    - payment_status : 결제 성공 여부
-    - promo_amount : 할인 금액
-    - promo_code : 프로모션 코드(할인쿠폰)
-    - shipment_fee : 배송 비용
-    - shipment_date_limit : 배송까지 최대 시각(언제까지는 도착할 것이다 느낌)
-    - shipment_location_lat : 배송지역 위도
-    - shipment_location_long : 배송지역 경도
-    - total_amount : 총 비용
-    - product_id : 상품 id
-    - quantity : 주문 수량
-    - item_price : 상품 가격
-    - product_gender : 상품 타겟 성별
-    - masterCategory : 최상위 분류
-    - subCategory : 서브 분류
-    - articleType : 상품 종류
-    - baseColor : 기본 색상
-    - season : 적합 계절
-    - year : 상품 출시 년도
-    - usage : 사용 방식(어느 복장인지)
-    - productDisplayName : 상품 이름
-    - customer_gender : 고객 성별
-    - birthdate : 고객 생일
-    - device_type : 디바이스 타입
-    - device_id : 디바이스 id
-    - device_version : 디바이스 버전
-    - home_location_lat : 집 위도
-    - home_location_long : 집 경도
-    - home_location : 집 위치
-    - first_join_date : 첫 가입 날짜
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/751d690c-07a5-4985-a039-4075836337c9)
+    - 총 33개 항목에 대하여 1,254,585개의 데이터
+  
+    - 컬럼 설명
+      - created_at : 이벤트 발생시각
+      - customer_id : 고객 id
+      - session_id : 세션 id
+      - payment_method : 결제 방식
+      - payment_status : 결제 성공 여부
+      - promo_amount : 할인 금액
+      - promo_code : 프로모션 코드(할인쿠폰)
+      - shipment_fee : 배송 비용
+      - shipment_date_limit : 배송까지 최대 시각(언제까지는 도착할 것이다 느낌)
+      - shipment_location_lat : 배송지역 위도
+      - shipment_location_long : 배송지역 경도
+      - total_amount : 총 비용
+      - product_id : 상품 id
+      - quantity : 주문 수량
+      - item_price : 상품 가격
+      - product_gender : 상품 타겟 성별
+      - masterCategory : 최상위 분류
+      - subCategory : 서브 분류
+      - articleType : 상품 종류
+      - baseColor : 기본 색상
+      - season : 적합 계절
+      - year : 상품 출시 년도
+      - usage : 사용 방식(어느 복장인지)
+      - productDisplayName : 상품 이름
+      - customer_gender : 고객 성별
+      - birthdate : 고객 생일
+      - device_type : 디바이스 타입
+      - device_id : 디바이스 id
+      - device_version : 디바이스 버전
+      - home_location_lat : 집 위도
+      - home_location_long : 집 경도
+      - home_location : 집 위치
+      - first_join_date : 첫 가입 날짜
 ## 4. 프로젝트 진행 내용
   ### 1. 전처리
     - 중복 컬럼 drop
