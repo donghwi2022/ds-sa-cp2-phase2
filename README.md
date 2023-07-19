@@ -53,31 +53,31 @@
         - first_join_date : 첫 가입 날짜
 ## 4. 프로젝트 진행 내용
   ### 1. 전처리
-  1. 예약 관련 컬럼
+  - 예약 관련 컬럼
       1. booking_id가 같은 데이터는 session_id도 같기 때문에 booking_id 컬럼은 드랍하고 session_id는 라벨링 진행
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ff7584e7-0e95-4830-9e57-97abe3332afd)
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/779378e0-1743-448f-82b4-20afdb8d2710)
       
-    - 상품 정보 관련 컬럼
+  - 상품 정보 관련 컬럼
       1. id 컬럼은 product_id 컬럼과 같기 때문에 drop
       2. 상품 타겟 성별 컬럼은 "gender_x → product_gender"로 변경
       3. 기본 색상 컬럼은 "baseColour → baseColor"로 변경
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/f28e67e5-e72e-49ac-a908-00e62dff2c40)
 
-    - 고객 정보 관련 컬럼
+  - 고객 정보 관련 컬럼
       1. 고객 이름 ~ 고객 이메일에 해당하는 컬럼은 앞의 customer_id로 대체 가능하므로 모두 drop
       2. "gender_y → customer_gender"로 컬럼명 변경
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ad30f2ab-c0fa-434e-aedf-b3fcaa238624)
 
-    - 기기 정보 관련 컬럼
+  - 기기 정보 관련 컬럼
       1. device_id 컬럼에 라벨 인코딩 적용
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ecd74272-8f01-4485-bb94-0cb1c7744b6e)
     
-    - 고객 집 위치 정보 관련 컬럼
+  - 고객 집 위치 정보 관련 컬럼
       1. home_country 컬럼의 값이 인도네시아밖에 존재하지 않으므로 drop
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/6bc0c0d9-e9c4-471e-b41d-80ce1523c8a8)
 
-    - first_join_date 컬럼 및 시계열 컬럼
+  - first_join_date 컬럼 및 시계열 컬럼
       1. created_at, shipment_date_limit : 초 단위까지만 나오도록 길이 제한
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ed970f58-e591-4dc4-8e8b-fc3e0de882e9)
 
