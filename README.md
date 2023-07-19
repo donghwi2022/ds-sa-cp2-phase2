@@ -83,32 +83,32 @@
 
   ### 2. 시각화
   1. 고객 분석
-    1. 상위 10명의 거래량 <br>
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e5de8e4c-962a-41ca-8225-462a742506d8) <br>
-    2. 고객의 성별 비율 <br>
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/74abe73e-d96b-4143-914e-2a14afd3015a) <br>
-    3. transaction 기준 연령대 분포 <br>
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/61114dd4-bd20-4f6a-b805-d4b149bac5be) <br>
-    4. 고객의 연도별 패션 카테고리 변화 <br>
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/08278a4a-7688-485e-b71e-ec1997a20b0a) <br>
+     1. 상위 10명의 거래량 <br>
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e5de8e4c-962a-41ca-8225-462a742506d8) <br>
+     2. 고객의 성별 비율 <br>
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/74abe73e-d96b-4143-914e-2a14afd3015a) <br>
+     3. transaction 기준 연령대 분포 <br>
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/61114dd4-bd20-4f6a-b805-d4b149bac5be) <br>
+     4. 고객의 연도별 패션 카테고리 변화 <br>
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/08278a4a-7688-485e-b71e-ec1997a20b0a) <br>
   
-  2. 상품 분석
-    1. 상품의 타겟 성별 비율 <br>
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7a97c30e-8ba2-426e-b6a6-44adcd45c0eb) <br>
-    2. 상품의 분류별 비율 <br>
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a8e6f9ea-104f-473c-9dfc-bd47275d61fa) <br>
-    3. 상품의 사용 복장 <br>
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/31ec08d6-2a01-4548-8d70-540f9afd0093) <br>
-    4. 고객들이 많이 찾은 계절 복장 <br>
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/dba9ec24-3395-4075-a7fa-b96b550e6e6d) <br>
+  3. 상품 분석
+     1. 상품의 타겟 성별 비율 <br>
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7a97c30e-8ba2-426e-b6a6-44adcd45c0eb) <br>
+     2. 상품의 분류별 비율 <br>
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a8e6f9ea-104f-473c-9dfc-bd47275d61fa) <br>
+     3. 상품의 사용 복장 <br>
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/31ec08d6-2a01-4548-8d70-540f9afd0093) <br>
+     4. 고객들이 많이 찾은 계절 복장 <br>
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/dba9ec24-3395-4075-a7fa-b96b550e6e6d) <br>
 
-  3. 컬럼의 연도별 변화
-    1. 연도별 디바이스 타입 변화 <br>
+  4. 컬럼의 연도별 변화
+     1. 연도별 디바이스 타입 변화 <br>
      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/6d0163f5-ced0-4432-90f5-ef500c168483) <br>
-    2. 연도별 결제 방식 변화 <br>
+     2. 연도별 결제 방식 변화 <br>
      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7b80f1d3-f494-450d-a68d-6f6a2af269f8) <br>
 
-  4. 컬럼의 계절별 변화
+  5. 컬럼의 계절별 변화
      1. 계절별 결제 방식 <br>
      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/046c3b44-43fe-4b27-96d4-7f160e3ec204) <br>
      2. 계절별 상품 masterCategory <br>
