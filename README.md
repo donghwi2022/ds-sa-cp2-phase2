@@ -115,11 +115,27 @@
      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/09f10447-caac-4241-8715-eaa3c1536ea7) <br>
 
   ### 3. 추가 전처리
-    - 불필요한 컬럼 drop
-    - Category 컬럼 통합
-    - 결측치 처리
-    - 구매에 실패한 데이터 삭제
-    - Parquet으로 파일 타입 변경(데이터 타입 변경시, 변경된 타입 저장)
+  - 미사용 컬럼 제거 및 병합
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/147ee7bb-6c6a-457a-a9e0-9fb68e524c2d)
+
+  - 결측치 처리
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/11b2fd56-9d19-4231-9020-a824e9130eed)
+    - baseColor : 'Unknown'으로 결측치 채움
+    - promo_code : 'No'로 결측치 채움
+    - usage : 'Unknown'으로 결측치 채움
+    - productDisplayName : 'Unknown'으로 결측치 채움
+    - season : 'Unknown'으로 결측치 채움
+    - year : 결측치에 해당하는 행 삭제
+
+  - 구매에 실패한 데이터 삭제후, 'payment_status' 컬럼 삭제
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/42f8aec3-028c-4204-8873-aa98d1943a80)
+
+  - 데이터 타입 변경 (메모리 문제 해결 방안)
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4bf0bedf-e2fc-4d8f-8663-a11dc18b00b2)
+
+  - Parquet으로 파일 타입 변경(변경된 데이터 타입 유지)
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fb05e569-9af6-47b3-8696-63e75a41ccce)
+
   ### 4. 모델링
     - baseline 모델
       : 가장 빈도가 높은 상품 20개를 모든 고객에게 추천
