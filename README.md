@@ -55,19 +55,19 @@
   ### 1. 전처리
   - 예약 관련 컬럼
     1. booking_id가 같은 데이터는 session_id도 같기 때문에 booking_id 컬럼은 드랍하고 session_id는 라벨링 진행
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ff7584e7-0e95-4830-9e57-97abe3332afd)
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/779378e0-1743-448f-82b4-20afdb8d2710)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ff7584e7-0e95-4830-9e57-97abe3332afd) 
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/779378e0-1743-448f-82b4-20afdb8d2710) 
       
   - 상품 정보 관련 컬럼
     1. id 컬럼은 product_id 컬럼과 같기 때문에 drop
     2. 상품 타겟 성별 컬럼은 "gender_x → product_gender"로 변경
     3. 기본 색상 컬럼은 "baseColour → baseColor"로 변경
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/f28e67e5-e72e-49ac-a908-00e62dff2c40)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/f28e67e5-e72e-49ac-a908-00e62dff2c40) 
 
   - 고객 정보 관련 컬럼
     1. 고객 이름 ~ 고객 이메일에 해당하는 컬럼은 앞의 customer_id로 대체 가능하므로 모두 drop
     2. "gender_y → customer_gender"로 컬럼명 변경
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ad30f2ab-c0fa-434e-aedf-b3fcaa238624)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ad30f2ab-c0fa-434e-aedf-b3fcaa238624) 
 
   - 기기 정보 관련 컬럼
     1. device_id 컬럼에 라벨 인코딩 적용
@@ -84,35 +84,35 @@
   ### 2. 시각화
   1. 고객 분석
     1. 상위 10명의 거래량 
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e5de8e4c-962a-41ca-8225-462a742506d8)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e5de8e4c-962a-41ca-8225-462a742506d8) <br>
     2. 고객의 성별 비율
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/74abe73e-d96b-4143-914e-2a14afd3015a)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/74abe73e-d96b-4143-914e-2a14afd3015a) <br>
     3. transaction 기준 연령대 분포
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/61114dd4-bd20-4f6a-b805-d4b149bac5be)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/61114dd4-bd20-4f6a-b805-d4b149bac5be) <br>
     4. 고객의 연도별 패션 카테고리 변화
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/08278a4a-7688-485e-b71e-ec1997a20b0a)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/08278a4a-7688-485e-b71e-ec1997a20b0a) <br>
   
   2. 상품 분석
     1. 상품의 타겟 성별 비율
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7a97c30e-8ba2-426e-b6a6-44adcd45c0eb)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7a97c30e-8ba2-426e-b6a6-44adcd45c0eb) <br>
     2. 상품의 분류별 비율
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a8e6f9ea-104f-473c-9dfc-bd47275d61fa)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a8e6f9ea-104f-473c-9dfc-bd47275d61fa) <br>
     3. 상품의 사용 복장
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/31ec08d6-2a01-4548-8d70-540f9afd0093)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/31ec08d6-2a01-4548-8d70-540f9afd0093) <br>
     4. 고객들이 많이 찾은 계절 복장
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/dba9ec24-3395-4075-a7fa-b96b550e6e6d)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/dba9ec24-3395-4075-a7fa-b96b550e6e6d) <br>
 
   3. 컬럼의 연도별 변화
     1. 연도별 디바이스 타입 변화
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/6d0163f5-ced0-4432-90f5-ef500c168483)
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/6d0163f5-ced0-4432-90f5-ef500c168483) <br>
     2. 연도별 결제 방식 변화
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7b80f1d3-f494-450d-a68d-6f6a2af269f8)
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7b80f1d3-f494-450d-a68d-6f6a2af269f8) <br>
 
   5. 컬럼의 계절별 변화
      1. 계절별 결제 방식
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/046c3b44-43fe-4b27-96d4-7f160e3ec204)
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/046c3b44-43fe-4b27-96d4-7f160e3ec204) <br>
      2. 계절별 상품 masterCategory
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/09f10447-caac-4241-8715-eaa3c1536ea7)
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/09f10447-caac-4241-8715-eaa3c1536ea7) <br>
 
   ### 3. 추가 전처리
     - 불필요한 컬럼 drop
