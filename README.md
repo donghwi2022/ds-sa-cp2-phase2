@@ -166,18 +166,18 @@
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e08ce65a-0138-4ecc-b4e9-1a09c28b659e) <br>
 
   ### 5. 성능평가
-    - 20개의 상품을 추천
-    - precision@k와 recall@k를 통해 성능평가
-    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ba6e1b04-8f30-4b63-9940-3d0655655a4c)
+  - 20개의 상품을 추천
+  - precision@k와 recall@k를 통해 성능평가
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ba6e1b04-8f30-4b63-9940-3d0655655a4c)
 
   ### 6. 모듈화
-  1. 앞의 추천 모델을 python 파일로 작성 및 저장
-  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4dadf6f5-b305-4cc8-b072-49cc674f2bcf)
-  2. 파일 저장 위치로 이동
-  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4f34c2e2-5f53-493a-9609-86d257b5542f)
-  3. Colab에서 해당 python 파일을 불러와 추천 진행
-  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/bad73ef9-0a28-4b5f-9fdc-e75585bc73be)
-  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/503b5897-1f81-42f9-befc-e133bdc59c0b)
+  1. 앞의 추천 모델을 python 파일로 작성 및 저장 <br>
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4dadf6f5-b305-4cc8-b072-49cc674f2bcf) <br>
+  2. 파일 저장 위치로 이동 <br>
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4f34c2e2-5f53-493a-9609-86d257b5542f) <br>
+  3. Colab에서 해당 python 파일을 불러와 추천 진행 <br>
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/bad73ef9-0a28-4b5f-9fdc-e75585bc73be) <br>
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/503b5897-1f81-42f9-befc-e133bdc59c0b) <br>
     
 ## 5. 프로젝트 결과
   - 기준 모델의 성능(20개 추천 기준)
