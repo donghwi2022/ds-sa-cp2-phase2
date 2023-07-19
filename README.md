@@ -137,11 +137,28 @@
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fb05e569-9af6-47b3-8696-63e75a41ccce)
 
   ### 4. 모델링
-    - baseline 모델
-      : 가장 빈도가 높은 상품 20개를 모든 고객에게 추천
-    - 추천 모델
-      - 상품의 정보를 바탕으로 CB모델을 통해 추천
-      - OOM 문제를 해결하기 위해 코사인 유사도가 아닌 annoy 라이브러리를 사용
+  - baseline 모델
+    : 가장 빈도가 높은 상품 20개를 모든 고객에게 추천
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ac50877f-9cde-4309-bfe6-b5b2df8ee33b)
+
+  - annoy 모델(벡터 유사도)을 사용한 추천
+    1. 사용할 특성 선택
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a82afacb-5f3e-4596-83e6-f6685e23d403)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ecbbf567-ee57-487c-9900-bca1074ca4b2)
+    2. 벡터 유사도를 계산하기 위해 특성 묶기
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/9bc09605-725d-4aaf-b9bb-901de512628a)
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fe529d3d-e5eb-463f-ac8d-04f5d9c9baae)
+    3. 벡터화 진행
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ea89e138-04d6-4928-8f79-f09a56935bd3)
+    4. 모델 초기화
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/d6c275f9-c85c-48e3-8d79-185e6af8c532)
+    5. 모델 구축
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/562e2258-4a47-4e8b-a0e2-3cd68ad809f0)
+    6. 추천 진행  
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/b3ada977-32de-4aba-9313-59c1281ec08d)
+    7. 추천 결과
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e08ce65a-0138-4ecc-b4e9-1a09c28b659e)
+
   ### 5. 성능평가
     - 20개의 상품을 추천
     - precision@k와 recall@k를 통해 성능평가
