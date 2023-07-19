@@ -143,27 +143,27 @@
 
   - annoy 모델(벡터 유사도)을 사용한 추천 <br>
     ① 사용할 특성 선택 <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a82afacb-5f3e-4596-83e6-f6685e23d403) <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ecbbf567-ee57-487c-9900-bca1074ca4b2) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a82afacb-5f3e-4596-83e6-f6685e23d403) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ecbbf567-ee57-487c-9900-bca1074ca4b2) <br>
     
     ② 벡터 유사도를 계산하기 위해 특성 묶기 <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/9bc09605-725d-4aaf-b9bb-901de512628a) <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fe529d3d-e5eb-463f-ac8d-04f5d9c9baae) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/9bc09605-725d-4aaf-b9bb-901de512628a) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fe529d3d-e5eb-463f-ac8d-04f5d9c9baae) <br>
     
     ③ 벡터화 진행 <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ea89e138-04d6-4928-8f79-f09a56935bd3) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ea89e138-04d6-4928-8f79-f09a56935bd3) <br>
     
     ④ 모델 초기화 <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/d6c275f9-c85c-48e3-8d79-185e6af8c532) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/d6c275f9-c85c-48e3-8d79-185e6af8c532) <br>
     
     ⑤ 모델 구축 <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/562e2258-4a47-4e8b-a0e2-3cd68ad809f0) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/562e2258-4a47-4e8b-a0e2-3cd68ad809f0) <br>
     
     ⑥ 추천 진행 <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/b3ada977-32de-4aba-9313-59c1281ec08d) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/b3ada977-32de-4aba-9313-59c1281ec08d) <br>
     
     ⑦ 추천 결과 <br>
-      &nbsp;&nbsp; ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e08ce65a-0138-4ecc-b4e9-1a09c28b659e) <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e08ce65a-0138-4ecc-b4e9-1a09c28b659e) <br>
 
   ### 5. 성능평가
     - 20개의 상품을 추천
