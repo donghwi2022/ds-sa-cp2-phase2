@@ -1,4 +1,4 @@
-# 내가 관심있는 의류 추천 서비스
+![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/437de29c-5d88-4bf7-b2ff-0e49c11e1c77)# 내가 관심있는 의류 추천 서비스
 ## 1. 프로젝트 목표
   대학교 졸업 전까지는 옷에 관심이 없었는데, 졸업 이후 친구들과 사적 모임을 하게 되면서 친구들에게 패션에 대해 지적받으면서 옷에 관심이 생김. 하지만, 많은 옷 중에서 나에게 맞는 옷을 찾기 힘들고 친구들이 추천해주는 옷은 내가 마음에 들지 않는 경우가 종종 발생. <br>
   → 옷에 대한 정보를 바탕으로 나에게 맞는 옷을 추천해주는 시스템을 직접 만들어보기로 결정.
@@ -82,11 +82,38 @@
     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ed970f58-e591-4dc4-8e8b-fc3e0de882e9)
 
   ### 2. 시각화
-    - 전체 고객에 대한 분석
-    - 전체 상품에 대한 분석
-    - 사용 디바이스 종류 분석
-    - 컬럼의 연도별 변화 분석(함수화하여 다양한 컬럼에 대해 분석할 수 있도록 작성)
-    - 컬럼의 계절별 분석(함수화하여 다양한 컬럼에 대해 분석할 수 있도록 작성)
+  1. 고객 분석
+    1. 상위 10명의 거래량 
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e5de8e4c-962a-41ca-8225-462a742506d8)
+    2. 고객의 성별 비율
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/74abe73e-d96b-4143-914e-2a14afd3015a)
+    3. transaction 기준 연령대 분포
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/61114dd4-bd20-4f6a-b805-d4b149bac5be)
+    4. 고객의 연도별 패션 카테고리 변화
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/08278a4a-7688-485e-b71e-ec1997a20b0a)
+  
+  2. 상품 분석
+    1. 상품의 타겟 성별 비율
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7a97c30e-8ba2-426e-b6a6-44adcd45c0eb)
+    2. 상품의 분류별 비율
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a8e6f9ea-104f-473c-9dfc-bd47275d61fa)
+    3. 상품의 사용 복장
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/31ec08d6-2a01-4548-8d70-540f9afd0093)
+    4. 고객들이 많이 찾은 계절 복장
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/dba9ec24-3395-4075-a7fa-b96b550e6e6d)
+
+  3. 컬럼의 연도별 변화
+    1. 연도별 디바이스 타입 변화
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/6d0163f5-ced0-4432-90f5-ef500c168483)
+    2. 연도별 결제 방식 변화
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7b80f1d3-f494-450d-a68d-6f6a2af269f8)
+
+  5. 컬럼의 계절별 변화
+     1. 계절별 결제 방식
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/046c3b44-43fe-4b27-96d4-7f160e3ec204)
+     2. 계절별 상품 masterCategory
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/09f10447-caac-4241-8715-eaa3c1536ea7)
+
   ### 3. 추가 전처리
     - 불필요한 컬럼 drop
     - Category 컬럼 통합
