@@ -82,7 +82,7 @@
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ed970f58-e591-4dc4-8e8b-fc3e0de882e9)
 
   ### 2. 시각화
-  - 구매 성공-실패 비율
+  - 구매 성공-실패 비율 <br>
      ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/72a9465b-c4c8-4e5a-a707-b123bc26098b) <br>
     : 전체 데이터 중에서 구매에 실패한 데이터는 고객이 입는 옷이라고 판단하기 어렵기 때문에 추가 전처리에서 제거 진행 <br>
     
