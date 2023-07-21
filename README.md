@@ -82,38 +82,10 @@
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ed970f58-e591-4dc4-8e8b-fc3e0de882e9)
 
   ### 2. 시각화
-  1. 고객 분석
-     1. 상위 10명의 거래량 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e5de8e4c-962a-41ca-8225-462a742506d8) <br>
-     2. 고객의 성별 비율 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/74abe73e-d96b-4143-914e-2a14afd3015a) <br>
-     3. transaction 기준 연령대 분포 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/61114dd4-bd20-4f6a-b805-d4b149bac5be) <br>
-     4. 고객의 연도별 패션 카테고리 변화 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/08278a4a-7688-485e-b71e-ec1997a20b0a) <br>
-  
-  3. 상품 분석
-     1. 상품의 타겟 성별 비율 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7a97c30e-8ba2-426e-b6a6-44adcd45c0eb) <br>
-     2. 상품의 분류별 비율 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a8e6f9ea-104f-473c-9dfc-bd47275d61fa) <br>
-     3. 상품의 사용 복장 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/31ec08d6-2a01-4548-8d70-540f9afd0093) <br>
-     4. 고객들이 많이 찾은 계절 복장 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/dba9ec24-3395-4075-a7fa-b96b550e6e6d) <br>
-
-  4. 컬럼의 연도별 변화
-     1. 연도별 디바이스 타입 변화 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/6d0163f5-ced0-4432-90f5-ef500c168483) <br>
-     2. 연도별 결제 방식 변화 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/7b80f1d3-f494-450d-a68d-6f6a2af269f8) <br>
-
-  5. 컬럼의 계절별 변화
-     1. 계절별 결제 방식 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/046c3b44-43fe-4b27-96d4-7f160e3ec204) <br>
-     2. 계절별 상품 masterCategory <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/09f10447-caac-4241-8715-eaa3c1536ea7) <br>
-
+  - 구매 성공-실패 비율
+     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/72a9465b-c4c8-4e5a-a707-b123bc26098b) <br>
+    : 전체 데이터 중에서 구매에 실패한 데이터는 고객이 입는 옷이라고 판단하기 어렵기 때문에 추가 전처리에서 제거 진행 <br>
+    
   ### 3. 추가 전처리
   - 미사용 컬럼 제거 및 병합 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/147ee7bb-6c6a-457a-a9e0-9fb68e524c2d)
@@ -137,6 +109,9 @@
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fb05e569-9af6-47b3-8696-63e75a41ccce)
 
   ### 4. 모델링
+  - 학습 데이터와 테스트 데이터 분리 <br>
+    ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/714dfddf-1027-4765-b05e-c5569b433e7f) <br>
+    : 학습 데이터와 테스트 데이터를 4:1의 비율로 분리 <br>
   - baseline 모델 <br>
     : 가장 빈도가 높은 상품 20개를 모든 고객에게 추천 <br>
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ac50877f-9cde-4309-bfe6-b5b2df8ee33b) <br>
@@ -151,7 +126,7 @@
       : 벡터 유사도를 계산하기 위해 위의 컬럼들을 'features'라는 컬럼으로 통합 <br>
     ③ 벡터화 진행 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ea89e138-04d6-4928-8f79-f09a56935bd3) <br>
-      : 성별에 대한 단어는 필수적으로 등장하기 때문에 모든 문서에서 자주 등장하는 단어에 대해서 패널티를 주는 tf-idf 벡터화를 사용 <br>
+      : 모든 문서에서 자주 등장하는 단어에 대해서 패널티를 주는 tf-idf 벡터화를 사용 <br>
     ④ 모델 초기화 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/d6c275f9-c85c-48e3-8d79-185e6af8c532) <br>
       : 두 벡터 사이의 각도가 작을 때 코사인 유사도에서 큰 차이를 보이지 않는 문제를 해결한 angular를 metric으로 사용
@@ -186,10 +161,10 @@
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/503b5897-1f81-42f9-befc-e133bdc59c0b) <br>
     : Colab에서 해당 python 파일을 불러와 추천 함수까지 정상적으로 동작하는 것을 확인 <br>
 ## 5. 프로젝트 결과
-  - 기준 모델의 성능(20개 추천 기준)
+  - baseline 모델의 성능 : 모든 고객에게 빈도가 높은 상품 20개를 동일하게 추천한 결과의 평균
     - precision@k : 0.00013472549680026923
     - recall@k : 0.00036301053382020325
-  - 추천 모델의 성능(20개 추천 기준)
+  - 추천 모델의 성능 : 각각의 고객에게 벡터 유사도가 높은 상품 20개를 추천한 결과의 평균
     - precision@k : 0.0001613899180419891
     - recall@k : 0.0004927032935038315
   - 결과 요약
