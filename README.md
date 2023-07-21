@@ -112,9 +112,10 @@
   - 학습 데이터와 테스트 데이터 분리 <br>
     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/714dfddf-1027-4765-b05e-c5569b433e7f) <br>
     : 학습 데이터와 테스트 데이터를 4:1의 비율로 분리 <br>
+    <br>
   - baseline 모델 <br>
-    : 가장 빈도가 높은 상품 20개를 모든 고객에게 추천 <br>
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ac50877f-9cde-4309-bfe6-b5b2df8ee33b) <br>
+    : 가장 빈도가 높은 상품 20개를 모든 고객에게 추천 <br>
   - annoy 모델(벡터 유사도)을 사용한 추천 <br>
     ① 사용할 컬럼 선택 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a82afacb-5f3e-4596-83e6-f6685e23d403) <br>
