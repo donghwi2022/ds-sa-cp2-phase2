@@ -116,27 +116,34 @@
   - baseline 모델 <br>
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ac50877f-9cde-4309-bfe6-b5b2df8ee33b) <br>
     : 가장 빈도가 높은 상품 20개를 모든 고객에게 추천 <br>
+    <br>
   - annoy 모델(벡터 유사도)을 사용한 추천 <br>
     ① 사용할 컬럼 선택 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a82afacb-5f3e-4596-83e6-f6685e23d403) <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/dc937654-cf05-46be-b242-63fd3abf7db9) <br>
       : 여러 가지의 컬럼 중, product_gender, baseColor, season, year, usage, Category의 총 6개 컬럼을 사용 <br>
+      <br>
     ② 벡터 유사도를 계산하기 위해 묶기 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/9bc09605-725d-4aaf-b9bb-901de512628a) <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fe529d3d-e5eb-463f-ac8d-04f5d9c9baae) <br>
       : 벡터 유사도를 계산하기 위해 위의 컬럼들을 'features'라는 컬럼으로 통합 <br>
+      <br>
     ③ 벡터화 진행 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ea89e138-04d6-4928-8f79-f09a56935bd3) <br>
       : 모든 문서에서 자주 등장하는 단어에 대해서 패널티를 주는 tf-idf 벡터화를 사용 <br>
+      <br>
     ④ 모델 초기화 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/d6c275f9-c85c-48e3-8d79-185e6af8c532) <br>
-      : 두 벡터 사이의 각도가 작을 때 코사인 유사도에서 큰 차이를 보이지 않는 문제를 해결한 angular를 metric으로 사용
+      : 두 벡터 사이의 각도가 작을 때 코사인 유사도에서 큰 차이를 보이지 않는 문제를 해결한 angular를 metric으로 사용 <br>
+      <br>
     ⑤ 모델 구축 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/562e2258-4a47-4e8b-a0e2-3cd68ad809f0) <br>
-      : 트리가 깊을수록 정확도가 올라가지만 빠른 결과 확인을 위해 깊이가 5인 모델을 구축
+      : 트리가 깊을수록 정확도가 올라가지만 빠른 결과 확인을 위해 깊이가 5인 모델을 구축 <br>
+      <br>
     ⑥ 추천 진행 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a8b47acc-14ff-4ae2-bc31-32b18d21b4d5) <br>
       : 고객 id를 입력받아 추천을 진행하는 함수를 만들고 동작 확인을 위해 고객 id가 89369인 고객으로 테스트 진행 <br>
+      <br>
     ⑦ 추천 결과(id가 89369인 고객에 대한 추천 진행 결과) <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e08ce65a-0138-4ecc-b4e9-1a09c28b659e) <br>
       : 해당 고객에 대하여 추천하는 상품인 20개의 상품 정보를 출력하는 것을 확인할 수 있음 <br>
@@ -154,9 +161,11 @@
   1. 앞의 추천 모델을 python 파일로 작성 및 저장 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4dadf6f5-b305-4cc8-b072-49cc674f2bcf) <br>
     : Visual Studio를 활용하여 구매 이력 데이터를 가져와 추천을 진행하기까지 함수를 하나의 Python 파일로 작성 <br>
+    <br>
   2. 파일 저장 위치로 이동 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4f34c2e2-5f53-493a-9609-86d257b5542f) <br>
     : 해당 Python 파일을 활용하기 위해 저장된 위치로 이동 <br>
+    <br>
   3. Colab에서 해당 python 파일을 불러와 추천 진행 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/bad73ef9-0a28-4b5f-9fdc-e75585bc73be) <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/503b5897-1f81-42f9-befc-e133bdc59c0b) <br>
