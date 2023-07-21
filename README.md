@@ -1,7 +1,7 @@
 # 내가 관심있는 의류 추천 서비스
 ## 1. 프로젝트 목표
-  대학교 졸업 전까지는 옷에 관심이 없었는데, 졸업 이후 친구들과 사적 모임을 하게 되면서 친구들에게 패션에 대해 지적받으면서 옷에 관심이 생김. 하지만, 많은 옷 중에서 나에게 맞는 옷을 찾기 힘들고 친구들이 추천해주는 옷은 내가 마음에 들지 않는 경우가 종종 발생. <br>
-  → 옷에 대한 정보를 바탕으로 나에게 맞는 옷을 추천해주는 시스템을 직접 만들어보기로 결정.
+  대학교 졸업 전까지는 옷에 관심이 없었는데, 졸업 이후 친구들과 사적 모임을 하게 되면서 친구들에게 패션에 대해 지적받으면서 옷에 관심이 생김. <br>
+  → Kaggle에서 얻은 옷 구매 이력 데이터를 바탕으로 의류 추천 모델을 모델링 해보기로 결정
 ## 2. 프로젝트 진행 과정
   |구분|기간|활동|비고|
   |:---:|:---:|---|---|
@@ -137,48 +137,54 @@
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fb05e569-9af6-47b3-8696-63e75a41ccce)
 
   ### 4. 모델링
-  - baseline 모델
+  - baseline 모델 <br>
     : 가장 빈도가 높은 상품 20개를 모든 고객에게 추천 <br>
       ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ac50877f-9cde-4309-bfe6-b5b2df8ee33b) <br>
-
   - annoy 모델(벡터 유사도)을 사용한 추천 <br>
-    ① 사용할 특성 선택 <br>
+    ① 사용할 컬럼 선택 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a82afacb-5f3e-4596-83e6-f6685e23d403) <br>
-        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ecbbf567-ee57-487c-9900-bca1074ca4b2) <br>
-    
-    ② 벡터 유사도를 계산하기 위해 특성 묶기 <br>
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/dc937654-cf05-46be-b242-63fd3abf7db9) <br>
+      : 여러 가지의 컬럼 중, product_gender, baseColor, season, year, usage, Category의 총 6개 컬럼을 사용 <br>
+    ② 벡터 유사도를 계산하기 위해 묶기 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/9bc09605-725d-4aaf-b9bb-901de512628a) <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fe529d3d-e5eb-463f-ac8d-04f5d9c9baae) <br>
-    
+      : 벡터 유사도를 계산하기 위해 위의 컬럼들을 'features'라는 컬럼으로 통합 <br>
     ③ 벡터화 진행 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ea89e138-04d6-4928-8f79-f09a56935bd3) <br>
-    
+      : 성별에 대한 단어는 필수적으로 등장하기 때문에 모든 문서에서 자주 등장하는 단어에 대해서 패널티를 주는 tf-idf 벡터화를 사용 <br>
     ④ 모델 초기화 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/d6c275f9-c85c-48e3-8d79-185e6af8c532) <br>
-    
+      : 두 벡터 사이의 각도가 작을 때 코사인 유사도에서 큰 차이를 보이지 않는 문제를 해결한 angular를 metric으로 사용
     ⑤ 모델 구축 <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/562e2258-4a47-4e8b-a0e2-3cd68ad809f0) <br>
-    
+      : 트리가 깊을수록 정확도가 올라가지만 빠른 결과 확인을 위해 깊이가 5인 모델을 구축
     ⑥ 추천 진행 <br>
-        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/b3ada977-32de-4aba-9313-59c1281ec08d) <br>
-    
+        ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/a8b47acc-14ff-4ae2-bc31-32b18d21b4d5) <br>
+      : 고객 id를 입력받아 추천을 진행하는 함수를 만들고 동작 확인을 위해 고객 id가 89369인 고객으로 테스트 진행 <br>
     ⑦ 추천 결과(id가 89369인 고객에 대한 추천 진행 결과) <br>
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e08ce65a-0138-4ecc-b4e9-1a09c28b659e) <br>
+      : 해당 고객에 대하여 추천하는 상품인 20개의 상품 정보를 출력하는 것을 확인할 수 있음 <br>
 
   ### 5. 성능평가
-  - 20개의 상품을 추천
-  - precision@k와 recall@k를 통해 성능평가 <br>
+  - 모든 고객에 대하여 20개의 상품 추천을 진행
+    - baseline 모델 : 모든 고객에게 빈도가 높은 상품 20개를 동일하게 추천
+    - annoy 모델 : 각각의 고객에게 벡터 유사도가 높은 상품 20개를 추천
+  - precision@k와 recall@k를 통해 성능평가(성능평가 결과는 프로젝트 결과에 표기) <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ba6e1b04-8f30-4b63-9940-3d0655655a4c)
+    - precision@k : 추천한 상품 중에서 실제 구매 이력이 있는 상품의 비율
+    - recall@k : 실제 구매 이력이 있는 상품 중에서 추천한 상품의 비율
 
   ### 6. 모듈화
   1. 앞의 추천 모델을 python 파일로 작성 및 저장 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4dadf6f5-b305-4cc8-b072-49cc674f2bcf) <br>
+    : Visual Studio를 활용하여 구매 이력 데이터를 가져와 추천을 진행하기까지 함수를 하나의 Python 파일로 작성 <br>
   2. 파일 저장 위치로 이동 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4f34c2e2-5f53-493a-9609-86d257b5542f) <br>
+    : 해당 Python 파일을 활용하기 위해 저장된 위치로 이동 <br>
   3. Colab에서 해당 python 파일을 불러와 추천 진행 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/bad73ef9-0a28-4b5f-9fdc-e75585bc73be) <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/503b5897-1f81-42f9-befc-e133bdc59c0b) <br>
-    
+    : Colab에서 해당 python 파일을 불러와 추천 함수까지 정상적으로 동작하는 것을 확인 <br>
 ## 5. 프로젝트 결과
   - 기준 모델의 성능(20개 추천 기준)
     - precision@k : 0.00013472549680026923
