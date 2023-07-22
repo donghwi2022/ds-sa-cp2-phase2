@@ -1,7 +1,7 @@
 # 고객이 관심있는 의류 추천 모델링
 ## 1. 프로젝트 목표
   대학교 졸업 전까지는 옷에 관심이 없었는데, 졸업 이후 친구들과 사적 모임을 하게 되면서 친구들에게 패션에 대해 지적받으면서 옷에 관심이 생김. <br>
-  → Kaggle에서 얻은 옷 구매 이력 데이터를 바탕으로 의류 추천 모델을 모델링 해보기로 결정
+  → Kaggle에서 얻은 옷 구매 이력 데이터를 바탕으로 의류 추천 모델링 진행
 ## 2. 프로젝트 진행 과정
   |구분|기간|활동|비고|
   |:---:|:---:|---|---|
@@ -82,11 +82,9 @@
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/ed970f58-e591-4dc4-8e8b-fc3e0de882e9)
 
   ### 2. 시각화
-  - 구매 성공-실패 비율 <br>
-     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/72a9465b-c4c8-4e5a-a707-b123bc26098b) <br>
-    : 전체 데이터 중에서 구매에 실패한 데이터는 고객이 입는 옷이라고 판단하기 어렵기 때문에 추가 전처리에서 제거 진행 <br>
+  
     
-  ### 3. 추가 전처리
+  ### 2. 추가 전처리
   - 미사용 컬럼 제거 및 병합 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/147ee7bb-6c6a-457a-a9e0-9fb68e524c2d)
 
@@ -99,7 +97,9 @@
     - season : 'Unknown'으로 결측치 채움
     - year : 결측치에 해당하는 행 삭제
 
-  - 구매에 실패한 데이터 삭제후, 'payment_status' 컬럼 삭제 <br>
+  - 구매 성공-실패 비율 <br>
+  ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/72a9465b-c4c8-4e5a-a707-b123bc26098b) <br>
+    : 전체 데이터 중에서 구매에 실패한 데이터는 고객이 입는 옷이라고 판단하기 어렵기 때문에 구매에 실패한 데이터 삭제후, 'payment_status' 컬럼 삭제 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/42f8aec3-028c-4204-8873-aa98d1943a80)
 
   - 데이터 타입 변경 (메모리 문제 해결 방안) <br>
@@ -108,7 +108,7 @@
   - Parquet으로 파일 타입 변경(변경된 데이터 타입 유지) <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/fb05e569-9af6-47b3-8696-63e75a41ccce)
 
-  ### 4. 모델링
+  ### 3. 모델링
   - 학습 데이터와 테스트 데이터 분리 <br>
     ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/714dfddf-1027-4765-b05e-c5569b433e7f) <br>
     : 학습 데이터와 테스트 데이터를 4:1의 비율로 분리 <br>
@@ -148,7 +148,7 @@
         ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/e08ce65a-0138-4ecc-b4e9-1a09c28b659e) <br>
       : 해당 고객에 대하여 추천하는 상품인 20개의 상품 정보를 출력하는 것을 확인할 수 있음 <br>
 
-  ### 5. 성능평가
+  ### 4. 성능평가
   - 모든 고객에 대하여 20개의 상품 추천을 진행
     - baseline 모델 : 모든 고객에게 빈도가 높은 상품 20개를 동일하게 추천
     - annoy 모델 : 각각의 고객에게 벡터 유사도가 높은 상품 20개를 추천
@@ -157,7 +157,7 @@
     - precision@k : 추천한 상품 중에서 실제 구매 이력이 있는 상품의 비율
     - recall@k : 실제 구매 이력이 있는 상품 중에서 추천한 상품의 비율
 
-  ### 6. 모듈화
+  ### 5. 모듈화
   1. 앞의 추천 모델을 python 파일로 작성 및 저장 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/4dadf6f5-b305-4cc8-b072-49cc674f2bcf) <br>
     : Visual Studio를 활용하여 구매 이력 데이터를 가져와 추천을 진행하기까지 함수를 하나의 Python 파일로 작성 <br>
