@@ -97,7 +97,7 @@
     - season : 'Unknown'으로 결측치 채움
     - year : 결측치에 해당하는 행 삭제
 
-  - 구매 성공-실패 비율 <br>
+  - 불필요 데이터 삭제 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/72a9465b-c4c8-4e5a-a707-b123bc26098b) <br>
     : 전체 데이터 중에서 구매에 실패한 데이터는 고객이 입는 옷이라고 판단하기 어렵기 때문에 구매에 실패한 데이터 삭제후, 'payment_status' 컬럼 삭제 <br>
   ![image](https://github.com/donghwi2022/ds-sa-cp2-phase2/assets/73475048/42f8aec3-028c-4204-8873-aa98d1943a80)
